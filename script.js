@@ -18,6 +18,7 @@ var times = document.getElementById("times")
 var minus = document.getElementById("minus")
 var plus = document.getElementById("plus")
 var equals = document.getElementById("equals")
+var decimal = document.getElementById("dot")
 
 var display = document.getElementById("screen")
 //event listeners
@@ -80,6 +81,10 @@ plus.addEventListener("click", function(){
   operator = "+"
   operatorPushed = true;
   addToDisplay("+");
+})
+decimal.addEventListener("click", function(){
+  checkIfOperatorPushed(".");
+  addToDisplay(".");
 })
 equals.addEventListener("click", function(){
   displayAnswer()
