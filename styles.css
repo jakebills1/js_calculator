@@ -1,0 +1,42 @@
+body{
+  font-family: 'Major Mono Display', monospace;
+}
+#body{
+  width: 400px;
+  height: 500px;
+  background-color: grey;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#screen{
+  margin-top: 25px;
+  width: 80%;
+  height: 10%;
+  background-color: antiquewhite;
+
+}
+#buttons{
+  margin-top: 25px;
+  width: 80%;
+  height: 70%;
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+}
+.button{
+  width: 25%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number{
+  font-size: 2em;
+}
+.digit-btn{
+  border:1px solid black; 
+  padding: 10px; 
+  border-radius: 100%;
+}
