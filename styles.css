@@ -15,6 +15,9 @@ body{
   width: 80%;
   height: 10%;
   background-color: antiquewhite;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
 
 }
 #buttons{
@@ -39,4 +42,7 @@ body{
   border:1px solid black; 
   padding: 10px; 
   border-radius: 100%;
+}
+.display-class{
+  font-size: 2em;
 }
