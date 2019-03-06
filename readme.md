@@ -1,0 +1,2 @@
+# Readme
+This is a calulator app, done in javascript, css, and html. Users can perform all normal operations on integers and floats, as well as exponentation. After pressing equals, the answer becomes the left-hand side of the equation and operations can be performed on it.  
