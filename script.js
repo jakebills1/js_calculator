@@ -19,6 +19,7 @@ var minus = document.getElementById("minus")
 var plus = document.getElementById("plus")
 var equals = document.getElementById("equals")
 var decimal = document.getElementById("dot")
+var resetBtn = document.getElementById("reset")
 
 var display = document.getElementById("screen")
 //event listeners
@@ -88,6 +89,9 @@ decimal.addEventListener("click", function(){
 })
 equals.addEventListener("click", function(){
   displayAnswer()
+})
+resetBtn.addEventListener("click", function(){
+  reset();
 })
 
 //functions
