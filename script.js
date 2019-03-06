@@ -132,7 +132,7 @@ function displayAnswer(){
   } else {
     switch (operator){
       case "/":
-        answer = Number(leftHand.join("")) / Number(leftHand.join(""));
+        answer = Number(leftHand.join("")) / Number(rightHand.join(""));
         break;
       case "*":
         answer = Number(leftHand.join("")) * Number(rightHand.join(""));
