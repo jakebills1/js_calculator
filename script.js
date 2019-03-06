@@ -96,7 +96,12 @@ resetBtn.addEventListener("click", function(){
 
 //functions
 function addToDisplay(text){
+  if (leftHand.length == 0 && operatorPushed == true){
+    alert("Must press number before operater")
+    reset();
+  } else {
   display.innerHTML += text
+  }
 }
 
 function checkIfOperatorPushed(num){
@@ -157,5 +162,6 @@ function reset(){
   leftHand.length = 0
   rightHand.length = 0
   answer = 0
+  operatorPushed = false
   display.innerHTML = ""
 }
