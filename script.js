@@ -121,5 +121,21 @@ function displayAnswer(){
     default:
       answer = "Invalid Expression";
   }
-  display.innerHTML = answer
+  if (answer != Infinity){
+    display.innerHTML = answer
+  } else {
+    alert("Don't divide by zero!")
+    rightHand.pop();
+    display.innerHTML = leftHand.join("") + parseOperator(operator) + rightHand.join("")
+  }
+}
+
+function parseOperator(op) {
+  if (op = "/"){
+    return "&divide"
+  } else if (op = "*"){
+    return "&times"
+  } else {
+    return op
+  }
 }
