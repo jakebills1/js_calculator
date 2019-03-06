@@ -118,10 +118,19 @@ function displayAnswer(){
     case "+":
       answer = Number(leftHand.join("")) + Number(rightHand.join(""));
       break;
+    case undefined:
+      answer = Number(leftHand.join(""));
+      setTimeout(function(){
+        reset() 
+      }, 1000)
+      break;
     default:
       answer = "Invalid Expression";
   }
   if (answer != Infinity){
+    leftHand.length = 0;
+    leftHand.push(answer);
+    rightHand.length = 0;
     display.innerHTML = answer
   } else {
     alert("Don't divide by zero!")
@@ -138,4 +147,11 @@ function parseOperator(op) {
   } else {
     return op
   }
+}
+
+function reset(){
+  leftHand.length = 0
+  rightHand.length = 0
+  answer = 0
+  display.innerHTML = ""
 }
