@@ -4,102 +4,37 @@ let rightHand = [];
 let operator;
 let operatorPushed = false;
 let exponent = false;
-var seven = document.getElementById("seven")
-var eight = document.getElementById("eight")
-var nine = document.getElementById("nine")
-var four = document.getElementById("four")
-var five = document.getElementById("five")
-var six = document.getElementById("six")
-var one = document.getElementById("one")
-var two = document.getElementById("two")
-var three = document.getElementById("three")
-var zero = document.getElementById("zero")
-var divide = document.getElementById("divide")
-var times = document.getElementById("times")
-var minus = document.getElementById("minus")
-var plus = document.getElementById("plus")
-var equals = document.getElementById("equals")
-var decimal = document.getElementById("dot")
-var resetBtn = document.getElementById("reset")
-var power = document.getElementById("power")
-
 var display = document.getElementById("screen")
-//event listeners
-seven.addEventListener("click", function(){
-  checkIfOperatorPushed(7);
-  addToDisplay(seven.innerHTML);
+
+ 
+$(".num-btn").on("click", function(){
+  checkIfOperatorPushed(this.firstChild.innerHTML)
+  addToDisplay(this.firstChild.innerHTML)
+  // debugger
 })
-eight.addEventListener("click", function(){
-  checkIfOperatorPushed(8);
-  addToDisplay(eight.innerHTML);
-})
-nine.addEventListener("click", function(){
-  checkIfOperatorPushed(9);
-  addToDisplay(nine.innerHTML);
-})
-four.addEventListener("click", function(){
-  checkIfOperatorPushed(4);
-  addToDisplay(four.innerHTML);
-})
-five.addEventListener("click", function(){
-  checkIfOperatorPushed(5);
-  addToDisplay(five.innerHTML);
-})
-six.addEventListener("click", function(){
-  checkIfOperatorPushed(6);
-  addToDisplay(six.innerHTML);
-})
-one.addEventListener("click", function(){
-  checkIfOperatorPushed(1);
-  addToDisplay(one.innerHTML);
-})
-two.addEventListener("click", function(){
-  checkIfOperatorPushed(2);
-  addToDisplay(two.innerHTML);
-})
-three.addEventListener("click", function(){
-  checkIfOperatorPushed(3);
-  addToDisplay(three.innerHTML);
-})
-zero.addEventListener("click", function(){
-  checkIfOperatorPushed(0);
-  addToDisplay(zero.innerHTML);
-})
-divide.addEventListener("click", function(){
-  operator = "/"
+
+$(".fun-btn").on("click", function(){
+  // debugger
+  operator = this.id
   operatorPushed = true;
-  addToDisplay("&divide");
+  addToDisplay(parseOperator(operator))
 })
-times.addEventListener("click", function(){
-  operator = "*"
-  operatorPushed = true;
-  addToDisplay("&times");
-})
-minus.addEventListener("click", function(){
-  operator = "-"
-  operatorPushed = true;
-  addToDisplay("-");
-})
-plus.addEventListener("click", function(){
-  operator = "+"
-  operatorPushed = true;
-  addToDisplay("+");
-})
-decimal.addEventListener("click", function(){
-  checkIfOperatorPushed(".");
-  addToDisplay(".");
-})
-equals.addEventListener("click", function(){
+
+$("#equals").click(function(){
   displayAnswer()
 })
-resetBtn.addEventListener("click", function(){
-  reset();
-})
-power.addEventListener("click", function(){
-  exponent = true;
-  operatorPushed = true;
-  addToDisplay("^")
-})
+
+
+
+
+// resetBtn.addEventListener("click", function(){
+//   reset();
+// })
+// power.addEventListener("click", function(){
+//   exponent = true;
+//   operatorPushed = true;
+//   addToDisplay("^")
+// })
 
 //functions
 function addToDisplay(text){
@@ -166,9 +101,9 @@ function displayAnswer(){
 }
 
 function parseOperator(op) {
-  if (op = "/"){
+  if (op == "/"){
     return "&divide"
-  } else if (op = "*"){
+  } else if (op == "*"){
     return "&times"
   } else {
     return op
